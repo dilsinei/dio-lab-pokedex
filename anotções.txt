@@ -1,0 +1,32 @@
+Requisição http
+
+requisição -> mandou para o servidor [
+URL
+    ${ip} /${patch = caminho do recurso}
+
+request Method: 
+GET     -> busca uma informação 
+POST    ->
+PUT     -> atualiza
+DELETE  -> apaga
+
+request headers
+    content-type: ex application/json
+
+request body
+{
+    "name":"Teste"
+}
+
+]
+
+Devolução do servidor [
+
+status code: 200 ok
+
+response headers > dizer como a resposta está configurada
+
+response body    > resposta em si
+
+]
+
