@@ -1,5 +1,4 @@
-
-
+//author: disinei lucio teixeira 15/12/2023
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const pokemonNumber = params.get('pokemonNumber');
@@ -28,13 +27,9 @@ const typeColor = {
 
 const url = "https://pokeapi.co/api/v2/pokemon/";
 const card = document.getElementById("card");
-//const btn = document.getElementById("btn");
-
 const idPokemon = pokemonNumber;
 
-
 let getPokeData = () => {
-
   const finalUrl = url + idPokemon;
   console.log(finalUrl);
   fetch(finalUrl)
@@ -52,7 +47,6 @@ let generatedCard = (data) => {
   const statAttack = data.stats[1].base_stat;
   const statDefense = data.stats[2].base_stat;
   const statSpeed = data.stats[5].base_stat;
-
   const themeColor = typeColor[data.types[0].type.name];
 
   card.innerHTML = `
@@ -89,7 +83,6 @@ let appendTypes = (types) => {
         let span = document.createElement("SPAN");
         span.textContent = item.type.name;
         document.querySelector(".types").appendChild(span);
-
     });
 };
 let styleCard = (color) => {
@@ -100,6 +93,5 @@ let styleCard = (color) => {
         });
 };
 
-//btn.addEventListener("click", getPokeData);
 getPokeData;
 window.addEventListener("load", getPokeData);
