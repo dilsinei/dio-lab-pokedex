@@ -1,10 +1,15 @@
 
-class Pokemon{
-    number;
+class Pokemon {
     name;
-    type;
+    number;
     types = [];
-    photo;
-
+    type;
+    image;
+    abilities;
+    weight;
+    height;
+    shape;
+    habitat;
+    about;
 }
 
