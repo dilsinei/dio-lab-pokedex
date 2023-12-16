@@ -1,4 +1,8 @@
-//author: disinei lucio teixeira 15/12/2023
+/**
+ * 
+ * 
+ * 
+**/
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const pokemonNumber = params.get('pokemonNumber');
@@ -36,7 +40,6 @@ let getPokeData = () => {
     .then((response) => response.json())
     .then((data) => {
       generatedCard(data);
-      //console.log(data)
     });
 };
 
